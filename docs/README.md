@@ -1,1 +1,1 @@
-# setting up initial project stuff
+# setting up initial project stuff for practicum
