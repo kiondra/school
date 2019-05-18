@@ -1,1 +1,1 @@
-# school
+# Kiondra Mills - Software Engineering Practicum
