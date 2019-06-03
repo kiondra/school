@@ -31,7 +31,9 @@ class Channels extends React.Component {
 
         this.state.channelsRef.on('child_added', snap => {
             loadedChannels.push(snap.val());
-            this.setState({ channels: loadedChannels}, () => this.setFirstChannel());
+            this.setState({ 
+                channels: loadedChannels
+            }, () => this.setFirstChannel());
         });
     };
 
@@ -67,8 +69,9 @@ class Channels extends React.Component {
                 key={channel.id}
                 onClick={() => this.changeChannel(channel)}
                 name={channel.name}
-                style={{ opacity: 0.7 }}
+                style={{ opacity: 0.9, color: "#f4d835"}}
                 active={channel.id === this.state.activeChannel}
+                
             >
 
             # {channel.name}
@@ -129,7 +132,12 @@ class Channels extends React.Component {
                     <span>
                         <Icon name="exchange" /> CHANNELS 
                     </span> { ' ' }
-                    ({ channels.length }) <Icon name="add" onClick={this.openModal}/>
+                    ({ channels.length }) 
+                    <Icon 
+                        name="add"
+                        onClick={this.openModal}
+                        style={{ color: "#ea02a8" }}
+                    />
                 </Menu.Item>
                 {this.displayChannels(channels)}
             </Menu.Menu>

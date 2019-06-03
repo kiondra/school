@@ -39,7 +39,7 @@ class UserPanel extends React.Component {
         const { user } = this.state;
 
         return(
-            <Grid style={{ background: '#4c3c4c' }}>
+            <Grid style={{ background: '#091b84' }}>
                 <Grid.Column>
                     <Grid.Row style={{ padding: '1.2em', margin: 0 }}>
                         {/* App Header */}
@@ -51,7 +51,7 @@ class UserPanel extends React.Component {
                     {/* User Dropdown */}
                     <Header style={{ padding: '0.25em' }} as="h4" inverted>
                         <Dropdown trigger={
-                            <span>
+                            <span id="display__name">
                             <Image src={user.photoURL} spaced="right" avatar />
                             {user.displayName}
                             </span>
